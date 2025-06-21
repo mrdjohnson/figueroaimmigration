@@ -17,11 +17,13 @@ export function Home() {
 
   return (
     <div className="flex max-h-screen w-full flex-col items-center overflow-scroll bg-blue-50">
-      <header className="flex w-full items-center justify-center py-4">
-        <img src={manualLawLogo} alt="Manuel Law Logo" className="h-40 object-contain" />
-      </header>
+      <div className='bg-base-100 w-full'>
+        <header className="flex w-full items-center justify-center pt-4">
+          <img src={manualLawLogo} alt="Manuel Law Logo" className="h-40 md:h-60 object-contain" />
+        </header>
 
-      <LanguageSwitch />
+        <LanguageSwitch />
+      </div>
 
       <div className="bg-secondary text-secondary-content mt-4 mb-6 w-screen py-3 text-center text-xl font-semibold md:mb-10 md:py-5 md:text-3xl">
         {t('servingAllStates')}
@@ -92,11 +94,7 @@ export function Home() {
       <div className="flex w-full flex-col gap-4 px-3 py-10 md:mx-auto md:max-w-4xl md:px-0">
         <div className="flex w-full items-center justify-center md:col-span-3">
           <div className="flex h-fit max-w-sm flex-col items-center justify-center gap-4 align-middle">
-            <img
-              src={manuelImage}
-              alt="Manuel Figueroa"
-              className="w-full rounded-lg object-cover"
-            />
+            <img src={manuelImage} alt="Manuel Figueroa" className="w-full object-cover" />
 
             <div className="text-center">
               <span className="text-base-100 text-xl font-semibold">{t('manuelFigueroa')}</span>

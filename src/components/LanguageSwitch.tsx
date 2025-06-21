@@ -9,12 +9,12 @@ export const LanguageSwitch = () => {
     /* english / spanish switch */
   }
   return (
-    <div className="flex w-full items-center justify-center px-4">
-      <div className="bg-base-100 flex gap-2 rounded-full p-1">
+    <div className="flex w-full items-center justify-center px-4 mb-4">
+      <div className="bg-base-100 flex gap-3 md:gap-6 rounded-full p-1">
         <Link
           to="/"
           className={twMerge(
-            'hover:bg-secondary hover:text-secondary-content flex items-center gap-1 rounded-full px-3 py-1 text-2xl',
+            'hover:bg-secondary hover:text-secondary-content flex items-center gap-1 rounded-full px-3 py-1 text-2xl md:text-4xl',
             !isEnglish && 'decoration-secondary underline underline-offset-4'
           )}
         >
@@ -24,7 +24,7 @@ export const LanguageSwitch = () => {
         <Link
           to="/en"
           className={twMerge(
-            'hover:bg-secondary hover:text-secondary-content flex items-center gap-1 rounded-full px-3 py-1 text-2xl',
+            'hover:bg-secondary hover:text-secondary-content flex items-center gap-1 rounded-full px-3 py-1 text-2xl md:text-4xl',
             isEnglish && 'decoration-secondary underline underline-offset-4'
           )}
         >

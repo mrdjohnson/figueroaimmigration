@@ -6,13 +6,15 @@ import {
   IconBrandLinkedinFilled,
   IconPhoneCall,
   IconClock,
+  IconBrandWhatsappFilled,
+  IconDeviceLandlinePhone,
 } from '@tabler/icons-react';
 import { LanguageSwitch } from '~/components/LanguageSwitch';
 import { useTranslation } from '~/hooks/useTranslation';
 
 export function Home() {
   const t = useTranslation();
-  
+
   return (
     <div className="flex max-h-screen w-full flex-col items-center overflow-scroll bg-blue-50">
       <header className="flex w-full items-center justify-center py-4">
@@ -32,9 +34,21 @@ export function Home() {
 
           <div className="text-base-content text-xl font-bold">{t('contact')}</div>
 
-          <div className="text-secondary text-xl font-bold underline underline-offset-4">
-            <a href="tel:855-767-6580">855-767-6580</a>
-          </div>
+          <a
+            href="tel:16467774582"
+            className="text-secondary flex items-center justify-center gap-2 text-xl font-bold underline underline-offset-4"
+          >
+            <IconDeviceLandlinePhone />
+            +1 (646) 777-4582
+          </a>
+
+          <a
+            href="https://wa.me/19393811030"
+            className="text-secondary mt-2 flex items-center justify-center gap-2 text-xl font-bold underline underline-offset-4"
+          >
+            <IconBrandWhatsappFilled />
+            +1 (939) 381-1030
+          </a>
 
           <div className="flex w-full flex-row justify-between pt-4">
             <a
@@ -75,9 +89,9 @@ export function Home() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col gap-4 px-3 py-10 md:mx-auto md:max-w-4xl md:px-0">
-        <div className="flex w-full items-center md:col-span-3 justify-center">
-          <div className="flex h-fit flex-col items-center gap-4 align-middle justify-center max-w-sm">
+      <div className="flex w-full flex-col gap-4 px-3 py-10 md:mx-auto md:max-w-4xl md:px-0">
+        <div className="flex w-full items-center justify-center md:col-span-3">
+          <div className="flex h-fit max-w-sm flex-col items-center justify-center gap-4 align-middle">
             <img
               src={manuelImage}
               alt="Manuel Figueroa"
@@ -92,22 +106,20 @@ export function Home() {
           </div>
         </div>
 
-        <div className="bg-base-100 col-span-5 mt-4 p-6 md:mt-0 md:ml-6 text-blue-100">
-          <p className="text-secondary text-xl capitalize">
-            {t('empower')}
-          </p>
+        <div className="bg-base-100 col-span-5 mt-4 p-6 text-blue-100 md:mt-0 md:ml-6">
+          <p className="text-secondary text-xl capitalize">{t('empower')}</p>
           <div className="bg-secondary my-4 h-1 w-[30%]" />
           {t('about')
             .split(/\n{2,}/)
             .map((paragraph, idx) => (
-              <p key={idx} className="mb-4">{paragraph}</p>
+              <p key={idx} className="mb-4">
+                {paragraph}
+              </p>
             ))}
         </div>
       </div>
 
-      <div className="mt-auto w-full bg-black px-8 py-2 text-white">
-        {t('disclaimer')}
-      </div>
+      <div className="mt-auto w-full bg-black px-8 py-2 text-white">{t('disclaimer')}</div>
 
       <div className="bg-base-100 text-base-content w-full p-6 text-center text-sm">
         {t('copyright')}

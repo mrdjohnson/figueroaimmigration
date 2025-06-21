@@ -23,7 +23,7 @@ export function Home() {
 
       <LanguageSwitch />
 
-      <div className="bg-secondary text-secondary-content mt-4 mb-10 w-screen py-5 text-center text-3xl font-semibold">
+      <div className="bg-secondary text-secondary-content mt-4 mb-6 w-screen py-3 text-center text-xl font-semibold md:mb-10 md:py-5 md:text-3xl">
         {t('servingAllStates')}
       </div>
 
